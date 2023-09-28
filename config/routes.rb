@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :courses
   resources :users
   resources :tutors
+  get '/courses_with_tutors', to: 'courses#fetch_with_tutors'
 end
