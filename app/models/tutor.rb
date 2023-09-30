@@ -11,6 +11,7 @@ class Tutor < ApplicationRecord
           user = User.find_by(user_name: params[:user_name])
           course = Course.find_by(name: params[:course_name])
           tutor = Tutor.create!(user: user, course: course)
+          { status: 200, message: 'Tutor Created' }
         end
       rescue => err
         return { status: 500, message: err.message}

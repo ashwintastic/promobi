@@ -4,11 +4,6 @@ class TutorsController < ApiController
     render json: resp
   end
 
-  # def fetch_tutors_and_courses
-  #   resp = Tutor.fetch_tutors_and_courses
-  #   render json: resp
-  # end
-
   private
   def tutor_params
     # Ignoring password encryption while transition

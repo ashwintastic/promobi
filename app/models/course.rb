@@ -16,7 +16,7 @@ class Course < ApplicationRecord
          'users.id as tutor_id'
          )
 
-         resp.group_by { |d| d[:course_name] }
+         { status: 200 , message: resp.group_by { |d| d[:course_name] } }
 
       rescue => err
         return { status: 500, message: err.message }

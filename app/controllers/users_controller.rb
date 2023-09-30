@@ -2,7 +2,7 @@ class UsersController < ApiController
   def create
     begin
       resp = User.create!(user_params)
-      render json: resp
+      render json: { status: 200, message: resp }
     rescue => err
       # ignoring actual error code
       render json: { message: err.message, status: 500 }
